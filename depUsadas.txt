@@ -1,0 +1,5 @@
+Backend: 
+Spring Web 
+Spring Data JPA
+PostgreSQL Driver
+H2 Database

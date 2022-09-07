@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projetogarcia.dscatalog.entities.Category;
+import com.projetogarcia.dscatalog.DTO.CategoryDTO;
 import com.projetogarcia.dscatalog.service.CategoryService;
 
 @RestController // Avisar que vai ser uma class Rest
@@ -19,8 +19,8 @@ public class CategoryResource {
 	private CategoryService service;
 	
 	@GetMapping
-	public ResponseEntity<List<Category>> findAll(){  // Método http / findAll()Busca todas categorias 
-		List<Category> list = service.findAll();
+	public ResponseEntity<List<CategoryDTO>> findAll(){  // Método http / findAll()Busca todas categorias 
+		List<CategoryDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list); // OK() é uma resposta 200
 	}
 }
